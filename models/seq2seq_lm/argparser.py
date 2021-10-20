@@ -2,7 +2,7 @@ import argparse
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--base_model',default='uer/bart-base-chinese-cluecorpussmall',choices=['bert-base-chinese','uer/bart-base-chinese-cluecorpussmall'],type=str)
+    parser.add_argument('--base_model',default='uer/bart-base-chinese-cluecorpussmall',choices=['bert-base-chinese','uer/bart-base-chinese-cluecorpussmall','p208p2002/bart-drcd-qg-hl'],type=str)
     parser.add_argument('-d','--dataset',default='drcd',choices=['drcd'],type=str)
     parser.add_argument('--batch_size',type=int,default=10)
     parser.add_argument('--epoch',default=10,type=int)
