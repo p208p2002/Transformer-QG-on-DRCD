@@ -1,0 +1,6 @@
+.log_*/
+test.py
+__py*/
+datasets/
+run_plan.sh
+nqg/
