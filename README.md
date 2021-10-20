@@ -69,7 +69,7 @@ optional arguments:
 ## Deploy
 ### Start up
 ```
-python train_seq2seq_lm.py --server --base_model YOUR_BASE_MODEL --from_checkpoint FROM_CHECKPOINT
+python train_seq2seq_lm.py --server --base_model p208p2002/bart-drcd-qg-hl
 ```
 ### Request example
 ```

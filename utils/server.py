@@ -1,7 +1,6 @@
-from flask import Flask
+from flask import Flask,Response
 import json
 from flask import request
-from flask.json import jsonify
 from utils import MaskedLMGenerator
 
 class ServerMixin():
@@ -44,13 +43,7 @@ class ServerMixin():
                     input_ids_len = model_input['input_ids'].shape[-1]
                     sample_output = sample_output[input_ids_len:]
                 decode_question = self.tokenizer.decode(sample_output, skip_special_tokens=True)
-
-                return jsonify({"predict":decode_question})
-            
-            elif self._type in ['masked_lm']:
-                generator = MaskedLMGenerator(self.model,self.tokenizer)
-                decode_question = generator.generate(model_input['input_ids'])
-                
-                return jsonify({"predict":decode_question})
+                decode_question = decode_question.replace(" ","")
+                return Response(json.dumps({"predict":decode_question},ensure_ascii=False),content_type="application/json; charset=utf-8" )
 
         self.flask.run(port=port)
