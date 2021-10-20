@@ -6,7 +6,7 @@ C' = [c1, c2, ..., [HL], a1, ..., a|A|, [HL], ..., c|C|]
 ```
 > Proposed by [Ying-Hong Chan & Yao-Chung Fan. (2019). A Re-current BERT-based Model for Question Generation.](https://www.aclweb.org/anthology/D19-5821/)
 
-我們還有另外一個英文QG [p208p2002/Transformer-QG-on-SQuAD](https://github.com/p208p2002/Transformer-QG-on-SQuAD)
+我們還有另外一個英文QG: [Transformer-QG-on-SQuAD](https://github.com/p208p2002/Transformer-QG-on-SQuAD)
 
 ## Features
 - Fully pipline from fine-tune to evaluation
