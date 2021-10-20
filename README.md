@@ -6,10 +6,12 @@ C' = [c1, c2, ..., [HL], a1, ..., a|A|, [HL], ..., c|C|]
 ```
 > Proposed by [Ying-Hong Chan & Yao-Chung Fan. (2019). A Re-current BERT-based Model for Question Generation.](https://www.aclweb.org/anthology/D19-5821/)
 
+我們還有另外一個英文QG: [Transformer-QG-on-SQuAD](https://github.com/p208p2002/Transformer-QG-on-SQuAD)
+
 ## Features
-- Fully pipline from fine-tune to evaluation
-- Support most of state of the art models
-- Fast deploy as a API server
+- 完整的流程；從微調到模型評分
+- 支援許多先進的語言模型
+- 快速部署至服務
 
 ## DRCD dataset
 [台達閱讀理解資料集 Delta Reading Comprehension Dataset (DRCD)](https://github.com/DRCKnowledgeTeam/DRCD) 屬於通用領域繁體中文機器閱讀理解資料集。 DRCD資料集從2,108篇維基條目中整理出10,014篇段落，並從段落中標註出30,000多個問題。
