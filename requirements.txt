@@ -1,6 +1,7 @@
 pytorch-lightning==1.2.4
-transformers==4.3.2
+transformers
 datasets
 Flask
 stanza
 git+https://github.com/voidful/nlg-eval.git@master
+loguru
