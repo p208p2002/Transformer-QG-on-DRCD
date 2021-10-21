@@ -10,5 +10,5 @@ ACCELERATOR = 'dp'
 #
 HL_TOKEN = '[HL]'
 MODEL_CONFIG = AutoConfig.from_pretrained(_args.base_model)
-MAX_INPUT_LENGTH = 512 # max 1024
+MAX_INPUT_LENGTH = 400 # max 1024
 MAX_QUESTION_LENGTH = 32

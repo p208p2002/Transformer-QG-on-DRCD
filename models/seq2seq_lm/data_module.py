@@ -98,6 +98,7 @@ class DrcdDataset(Dataset,DatasetUtilsMixin):
     
     def __getitem__(self,index):
         data = self.data[index]
+        data['question'] = data['question'].replace("？","?")
         
         answer_text = data['answers'][0]['text']
         answer_len = len(answer_text)
