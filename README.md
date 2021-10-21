@@ -49,15 +49,16 @@ The hole development is based on Ubuntu system
 ### Seq2Seq LM
 ```
 usage: train_seq2seq_lm.py [-h]
-                           [--base_model {facebook/bart-base,facebook/bart-large,t5-small,t5-base,t5-large}]
-                           [-d {squad,squad-nqg}] [--epoch EPOCH] [--lr LR]
-                           [--dev DEV] [--server] [--run_test]
-                           [-fc FROM_CHECKPOINT]
+                           [--base_model {bert-base-chinese,uer/bart-base-chinese-cluecorpussmall,p208p2002/bart-drcd-qg-hl}]
+                           [-d {drcd}] [--batch_size BATCH_SIZE]
+                           [--epoch EPOCH] [--lr LR] [--dev DEV] [--server]
+                           [--run_test] [-fc FROM_CHECKPOINT]
 
 optional arguments:
   -h, --help            show this help message and exit
-  --base_model {facebook/bart-base,facebook/bart-large,t5-small,t5-base,t5-large}
-  -d {squad,squad-nqg}, --dataset {squad,squad-nqg}
+  --base_model {bert-base-chinese,uer/bart-base-chinese-cluecorpussmall,p208p2002/bart-drcd-qg-hl}
+  -d {drcd}, --dataset {drcd}
+  --batch_size BATCH_SIZE
   --epoch EPOCH
   --lr LR
   --dev DEV
@@ -67,12 +68,16 @@ optional arguments:
 ```
 
 ## Deploy
-### Start up
-```
+### From pre-trained (recommend)
+```sh
 python train_seq2seq_lm.py --server --base_model p208p2002/bart-drcd-qg-hl
 ```
-### Request example
+### From your own checkpoint
+```sh
+python train_xxx_lm.py --server --base_model YOUR_BASE_MODEL --from_checkpoint FROM_CHECKPOINT
 ```
+### Request example
+```sh
 curl --location --request POST 'http://127.0.0.1:5000/' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'context=[HL]伊隆·里夫·馬斯克[HL]是一名企業家和商業大亨'
