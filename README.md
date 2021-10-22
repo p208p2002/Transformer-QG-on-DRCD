@@ -11,7 +11,7 @@ C' = [c1, c2, ..., [HL], a1, ..., a|A|, [HL], ..., c|C|]
 ## Features
 - 完整的流程；從微調到模型評分
 - 支援許多先進的語言模型
-- 快速部署至服務
+- 內建Flask，可快速作為API server
 
 ## DRCD dataset
 [台達閱讀理解資料集 Delta Reading Comprehension Dataset (DRCD)](https://github.com/DRCKnowledgeTeam/DRCD) 屬於通用領域繁體中文機器閱讀理解資料集。 DRCD資料集從2,108篇維基條目中整理出10,014篇段落，並從段落中標註出30,000多個問題。
@@ -67,7 +67,7 @@ optional arguments:
   -fc FROM_CHECKPOINT, --from_checkpoint FROM_CHECKPOINT
 ```
 
-## Deploy
+## Run as API server
 ### From pre-trained (recommend)
 ```sh
 python train_seq2seq_lm.py --server --base_model p208p2002/bart-drcd-qg-hl
