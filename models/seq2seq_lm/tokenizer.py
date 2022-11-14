@@ -16,6 +16,6 @@ def get_tokenizer(base_model):
         #     print('set eos_token...')
         #     tokenizer.add_special_tokens({'eos_token': '[EOS]'})
         # # add token here
-        # tokenizer.add_tokens([HL_TOKEN],special_tokens=True)
+        tokenizer.add_tokens([HL_TOKEN],special_tokens=True)
 
     return tokenizer
